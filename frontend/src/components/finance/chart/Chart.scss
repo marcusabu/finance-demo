@@ -1,0 +1,16 @@
+.ChartComponent {
+  padding-bottom: 30px;
+
+  .card-header {
+    .bg-warning {
+      padding: 5px 10px !important;
+    }
+
+    .chartBadge {
+      position: absolute;
+      right: 20px;
+    }
+  }
+
+}
+

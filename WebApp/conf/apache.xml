@@ -1,0 +1,20 @@
+<VirtualHost *:80>
+ServerName marcusabukari.nl
+ServerAlias www.marcusabukari.nl
+ServerAdmin marcusabu@gmail.com
+DocumentRoot /var/www/WebApp
+
+Alias /static /var/www/WebApp/static
+<Directory /var/www/WebApp/static>
+    Require all granted
+</Directory>
+
+<Directory /var/www/WebApp>
+    <Files wsgi.py>
+        Require all granted
+    </Files>
+</Directory>
+
+WSGIScriptAlias / /var/www/WebApp/WebApp/wsgi.py
+WSGIPassAuthorization On
+</VirtualHost>

@@ -1,0 +1,16 @@
+.Transactions {
+    .modal-body {
+        padding: 0 !important;
+        .table {
+            tr td .positive {
+                background-color: rgba(0, 128, 0, 0.5);
+                padding: 7px;
+                border-radius: 5px;
+            }
+
+            tr.deleted {
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+        }
+    }
+}

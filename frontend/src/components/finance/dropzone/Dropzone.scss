@@ -1,0 +1,12 @@
+.Dropzone {
+    .modal-body > div {
+        width: 100% !important;
+    }
+    .uploadResult {
+        padding-top: 30px;
+
+        .category {
+            float: right;
+        }
+    }
+}

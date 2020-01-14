@@ -1,0 +1,81 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "env": {
+    "browser": true
+  },
+  "extends": [
+    "airbnb",
+    "prettier"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error"
+    ],
+    "react/jsx-indent": "off",
+    "react/jsx-indent-props": "off",
+    "no-param-reassign": "off",
+    "react/destructuring-assignment": "off",
+    "react/jsx-filename-extension": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/forbid-prop-types": "off",
+    "import/no-cycle": "off",
+    "react/no-deprecated": "off",
+    "react/no-array-index-key": "off",
+      // --- Below are the rules that we want to disable or alter from the extended AirBnB Base template ---.
+      "func-names": "off",
+      "no-unused-vars": "off",
+      "no-use-before-define": "off",
+      "no-console": "off",
+      "radix": "off",
+      "new-cap": "off",
+      "no-plusplus": "off",
+      "no-underscore-dangle": "off",
+      "no-useless-escape": "off",
+      "no-else-return": "off",
+      "no-lonely-if": "off",
+      "no-fallthrough": "off",
+      "prefer-template": "error",
+      "no-restricted-properties": "off",
+      "prefer-destructuring": "off",
+      "vars-on-top": "off",
+      "eqeqeq": "off",
+      "consistent-return": "off",
+      "block-scoped-var": "off",
+      "no-multi-assign": "off",
+      "no-restricted-globals": "off",
+      "no-throw-literal": "off",
+      "no-shadow": "off",
+      "no-restricted-syntax": "off",
+      "no-prototype-builtins": "off",
+      "no-continue": "off",
+      "valid-typeof": "off",
+      "no-bitwise": "off",
+      "no-script-url": "off",
+      "camelcase": "off",
+      "guard-for-in": "off",
+      "array-callback-return": "off",
+      "operator-assignment": "off",
+      "no-constant-condition": "off",
+      "no-loop-func": "off",
+      "no-extend-native": "off",
+      "no-cond-assign": "off",
+      "no-var": "off",
+      "prefer-rest-params": "off",
+      "prefer-spread": "off"
+  }
+}

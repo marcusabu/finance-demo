@@ -1,0 +1,27 @@
+.SummaryComponent {
+    display: flex;
+    justify-content: space-evenly;
+
+    .card {
+        width: 100%;
+
+        .card-header h6 {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .h6 {
+                width: initial !important;
+            }
+        }
+
+        .card-body {
+            padding: 30px 20px 20px !important;
+        }
+    }
+
+    p {
+        text-align: center;
+        margin-bottom: 0 !important;
+    }
+}

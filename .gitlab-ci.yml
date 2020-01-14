@@ -1,0 +1,49 @@
+cache:
+  paths:
+  - frontend/node_modules/
+
+variables:
+  CI: "false"
+
+stages:
+  - test
+  - deploy
+
+test_django:
+  image: python:2.7
+  stage: test
+  script:
+    - pip install -r requirements.txt
+    - python manage.py test --noinput
+
+test_frontend:
+  image: node:latest
+  stage: test
+  script:
+    - cd frontend
+    - npm install .
+    - npm test
+    - npm run build
+
+deploy_django:
+  image: python:2.7
+  stage: deploy
+  script:
+    - pip install fabric==1.9.1
+    - pip install django-environ==0.4.5
+    - pip uninstall pycrypto
+    - easy_install pycrypto
+    - fab prod deploy
+    - pip install requests
+  only:
+    - master
+
+deploy_frontend:
+  image: node:latest
+  stage: deploy
+  script:
+    - npm install netlify-cli -g
+    - netlify build
+    - netlify deploy --prod
+  only:
+      - master
